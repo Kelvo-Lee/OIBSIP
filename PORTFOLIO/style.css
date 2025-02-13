@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: 'MyCustomFont';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format(truetype);
+}
+
+body{
+    background-color: black;
+    color: #fff;
+    font-family: 'MyCustomFont';
+
+}
+
+/* Styling for header section */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+ color: rgb(0, 102, 255);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: white;
+    display: none;
+
+}
+
+.fa-x{
+    font-size: 5rem;
+}
+
+/* Styling for home section */
+
+.home{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10% 0;
+
+}
+
+.home-content {
+    max-width: 35rem;
+}
+
+.home-content h3{
+    margin-bottom: 1rem;
+}
+
+.home-content h3 span{
+    color: rgb(0, 102, 255);
+}
+
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: -0.5rem 0;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.home-img img{
+    height: 60vh;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(0, 102, 255);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(0, 102, 255);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    animation: slideTop .5s ease;
+}
+
+.social-media a:hover{
+    background-color: rgb(0, 102, 255);
+    color: black;
+    box-shadow: 0 0 20px rgb(0, 102, 255);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(0, 102, 255);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 102, 255);
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Styling for about section */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 115vh;
+    gap: 5rem;
+    background-color: rgba(128, 128, 128, 0.089);
+    padding: 70px;
+}
+
+.about-img img{
+    max-width: 450px;
+    margin-right: -20px;
+    width: 21rem;
+    height: 50vh;
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+    border-radius: 1rem;
+} 
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about-content h2{
+    text-align: left;
+    margin-bottom: 1rem;
+
+}
+
+.about-content h2 span{
+    color: rgb(0, 102, 255);
+    
+}
+
+.about-content h3{
+    font-size: 1.5rem;
+}
+
+.about-content p{
+    font-size: 1rem;
+    margin: 1rem 0 1.5rem;
+    max-width: 600px;
+}
+
+.about-content h3 span{
+    color: rgb(0, 102, 255);
+}
+
+/* Styling for services section */
+
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    height: 90vh;
+}
+
+.services-box{
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.089);
+    border: .2rem solid black;
+    width: 30rem;
+    transition: .5s ease;
+    box-shadow: 0 0 10px rgb(106, 145, 204); 
+    height: 60vh;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -5rem;
+}
+
+.services-box:hover{
+    border-color: rgb(0, 102, 255);
+    transform: scale(1.02);
+    transform: rotateY(180deg);
+}
+
+/* styling for the flip effect */
+
+  
+.services-box-front,
+.services-box-back {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.services-box-front {
+    color: white;
+}
+  
+.services-box-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.services h2{
+    margin-bottom: 4rem;
+    padding-top: 5rem;
+}
+
+.services h2 span{
+    color: rgb(0, 102, 255);
+}
+
+.services-box i {
+    font-size: 2rem;
+    color: rgb(0, 102, 255);
+    margin-bottom: 1rem;
+}
+
+.services-box h3{
+    font-size: 1.5rem;
+}
+
+.services-box p{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+/* Styling for portfolio section */
+
+.portfolio{
+    background-color: rgba(128, 128, 128, 0.089);
+    height: 110vh;
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+    padding-top: 5rem;
+}
+
+.portfolio h2 span{
+    color: rgb(0, 102, 255);
+
+}
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 10rem;
+    margin-top: -8rem;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+    height: 30vh;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+    overflow: hidden;
+    display: flex;
+    width: 20rem;
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0,.1),rgb(0, 102, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+
+}
+
+.portfolio-layer h4{
+    font-size: 2rem;
+}
+
+.portfolio-layer p{
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    width: 3rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 1.2rem;
+    color: black;
+    margin: 0.8rem ;
+}
+
+/* Styling for contact section */
+
+.contact{
+    height: 110vh;
+}
+
+.contact h2{
+    margin-bottom: 4rem;
+    padding-top: 5rem;
+}
+
+.contact h2 span{
+    color: rgb(0, 102, 255);
+}
+
+.contact input{
+    width: 25rem;
+    border-radius: 0.5rem;
+    height: 10vh;
+    margin-top: 1rem;
+    background-color: rgba(128, 128, 128, 0.089);
+    color: #fff;
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+}
+
+.form{
+    margin-left: 17rem;
+}
+
+.form textarea{
+    width:50rem;
+    height: 25vh; 
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    background-color: rgba(128, 128, 128, 0.089);
+    color: #fff;
+    resize: none;
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+}
+
+input[placeholder]{
+    padding: 1rem;
+}
+
+textarea[placeholder]{
+    padding: 1rem;
+}
+
+.form .btn{
+    display: flex;
+    margin: 2rem 20rem;
+    cursor: pointer;
+}
+
+
+/* Styling for footer section */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: rgba(128, 128, 128, 0.089);
+}
+
+.footer-text p{
+    font-weight: 800;
+}
+
+.footer-iconTop{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: rgb(0, 102, 255);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop:hover{
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+}
+
+.footer-iconTop a i {
+    font-size: 1rem;
+    color: black;
+}
+
+
+/* Styling for keyframe animation */
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Styling for responsiveness */
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem
+    }
+
+    .footer{
+        padding: 2rem 10%;
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .home-img img {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .home-content{
+        flex-direction: column;
+    }
+
+    .home-content h3{
+        font-size: 2.4rem;
+    }
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+
+    .home-content p{
+        font-size: 1.3rem;
+    }
+
+    .home-img img{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    .about p{
+        font-size: 1.3rem;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: 50vh;
+    }
+ 
+    .services-box {
+        width: 100%;
+    }
+
+    .services-container{
+        height: 70vh;
+    }
+
+    .services h2{
+        margin-top: -5rem;
+        padding-bottom: 6rem;
+    }
+
+    .services-container p{
+        font-size: 1.3rem;
+    }
+    
+    .services-box h3{
+        font-size: 2.4rem;
+    }
+
+    .portfolio{
+        height: 110vh;
+    }
+
+    .portfolio-container{
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .portfolio h2{
+        margin-top: -5rem;
+        padding-bottom: 3rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+ 
+    }
+
+    #menu-icon{
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 0.1rem;
+        padding: 1rem;
+        border: none;
+        z-index: 1001;
+        font-size: 2rem;
+    }
+
+    .navbar{
+        display: flex;
+        font-size: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        left: 0;
+        width: 100%; 
+        background: black;
+        z-index: 1000; 
+        display: none;
+        top: 100%;
+        padding: 1rem 3%;
+        border-top: .1rem solid rgba(128, 128, 128, 0.089);
+        box-shadow: 0.5rem 1rem rgba(128, 128, 128, 0.089);
+    } 
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .contact .btn{
+        margin-left: 16rem;
+    }
+
+    .form{
+        margin-left: 15rem;
+    }
+}
+
+@media (max-width: 617px){
+
+}
+
+
+
+/* Extra small screens (max width: 480px) */
+/* @media (max-width: 480px) {
+    .header {
+        padding: 0.5rem 2%;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1rem;
+    }
+
+    .social-media a {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+    }
+
+    .portfolio-box img {
+        height: auto;
+    }
+
+    .footer-iconTop {
+        padding: 0.5rem;
+    }
+
+    .footer-iconTop a i {
+        font-size: 0.8rem;
+    }
+} */
