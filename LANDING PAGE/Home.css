@@ -1,0 +1,765 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header section */
+
+header{
+    background-color: rgb(6, 6, 43);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.Logo{
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.Logo a {
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 24px; 
+}
+
+li a {   
+    text-decoration: none;  
+    font-size: large; 
+    font-weight: bold;
+    padding: 2rem;
+    color: rgba(226, 226, 226, 0.815);
+}
+
+button{
+    background-color: blue;
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+
+.Left{
+    width: 25rem;
+    height: 25rem;
+    margin-top: 2rem;
+}
+
+.Left h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Left p{
+    color: rgba(226, 226, 226, 0.815);
+    margin-top: 1rem;
+}
+
+.Right img{
+    width: 22rem;
+    height: 20rem;
+
+}
+
+.Search input{
+    width: 23rem;
+    height: 8vh;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.Search input[placeholder="ZIP code or City"] {
+    padding: 1.1rem;
+}
+
+.Search button{
+    width: 5rem;
+    height: 6vh;
+    position: absolute;
+    margin-left: -5.5rem;
+    margin-top: 2.5rem;
+}
+
+/* Styling first body section */
+body{
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.First-Body{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.First{
+    width: 15rem;
+    height: 10rem;
+}
+
+.First p{
+    color: rgba(19, 11, 11, 0.575);
+    margin-top: 0.5rem;
+    font-size: large;
+}
+
+.First a{
+    color: rgb(21, 21, 133);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fa-solid{
+    color: rgb(21, 21, 133);
+    position: absolute;
+    margin-left: -2.5rem;
+    font-size: 1.5rem;
+}
+
+.second{
+    width: 15rem;
+    height: 10rem;
+}
+
+.second p{
+    color: rgba(19, 11, 11, 0.575);
+    margin-top: 0.5rem;
+    font-size: large;
+     
+}
+
+.second a{
+    color: rgb(21, 21, 133);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.third{
+    width: 15rem;
+    height: 10rem;
+}
+
+.third p{
+    color: rgba(19, 11, 11, 0.575);
+    margin-top: 0.5rem;
+    font-size: large;
+     
+ }
+
+.third a{
+    color: rgb(21, 21, 133);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fa-arrow-right{
+    margin: 0 auto;
+    font-size: 1rem;
+    color: rgb(21, 21, 133);
+    padding: 0.2rem; 
+}
+.Main{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.about h1{
+    color: rgb(21, 21, 133);
+    margin-left: 2rem;
+}
+
+.about h4{
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.about p{
+    margin-left: 2rem;
+}
+
+.about-img img{
+    width: 30rem;
+    height: 50vh;
+}
+
+.fa-sitemap,
+.fa-boxes-packing,
+.fa-location-crosshairs{
+  margin-top: 1.8rem;
+  padding-left: 2rem;
+}
+
+/* styling second Body section */
+
+.container{
+    background-color: white;
+    height: 180vh;
+    display: grid;
+    justify-content: center;
+    margin-top: 4rem;
+  
+}
+
+.container h1{
+    color: rgb(21, 21, 133);
+    margin-top: 3rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.up{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.down{
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+   
+}
+
+.service{
+    border: 1px solid gainsboro;
+    width: 21.9rem;
+    height: 20vh;
+    margin-top: -1rem;
+}
+
+.service h5{
+    color: rgb(21, 21, 133);
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.service p{
+    color: rgba(19, 11, 11, 0.575);
+    margin-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+/* styling third Body section */
+
+.container-2{
+    background: linear-gradient(rgba(98, 106, 114, 0.514), rgba(98, 106, 114, 0.514)), url(images/cta-bg.jpg);
+    height: 60vh;
+}
+
+.cta{
+    text-align: center;
+}
+
+.container-2 h1{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 8rem;
+    margin-bottom: 1rem;
+}
+
+.container-2 p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    background-color: transparent;
+    border: 2px solid white;
+    width: 11rem;
+    height: 7vh;
+    margin: 1rem;
+
+}
+
+.button a{
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* styling fourth Body section */
+
+.container-3{
+    background-color: white;
+    height: 240vh;
+
+}
+
+.features-1{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.F-1{
+    margin-top: 6rem;
+}
+
+.features-1 img{
+    margin-top: 5rem;
+
+}
+
+.fa-sharp{
+    font-size: 1rem;
+    padding: 1.2rem;
+    padding-left: 2.5rem;
+    color: blue;
+}
+
+.F-1 p{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: rgba(19, 11, 11, 0.575);
+
+}
+
+.F-1 h4{
+    color: rgb(21, 21, 133);
+    font-size: large;
+}
+
+.F-1 h5{
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: rgba(19, 11, 11, 0.575);
+    
+}
+
+.features-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 4rem;
+}
+
+.F-2{
+    margin-top: 3rem;
+}
+
+.F-2 h4{
+    color: rgb(21, 21, 133);
+    font-size: large;
+}
+
+.F-2 h5{
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: rgba(19, 11, 11, 0.575);
+}
+
+.F-2 p{
+    margin-top: 1rem;
+    color: rgba(19, 11, 11, 0.575);
+
+}
+
+/* styling fifth Body section */
+
+.container-4{
+    background-color: white;
+    height: 110vh;
+}
+
+.container-4 h4{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(21, 21, 133);
+    font-size: x-large;
+}
+
+.container-4 span h4{
+    border-bottom: 2px solid blue;
+    width: 2rem;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.Price-con{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.Price-con h5{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+}
+
+.Price-con p{
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 0.5rem;
+    color: blue;
+}
+
+.Price-con span{
+    font-size: 3rem;
+    margin-left: 0.8rem;
+    position: relative;
+    color: blue;
+}
+
+.price{
+    margin-top: 0.3rem;
+}
+
+.pricing{
+    border-radius: 5px;
+    height:63vh;
+    width: 21rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    box-shadow: whitesmoke 5px 5px 20px 5px;
+}
+
+
+.pricing sub{
+    color: gray;
+}
+
+.pricing .fa-sharp{
+    font-size: 0.7rem;
+    color: green;
+}
+
+.plan{
+    margin-top: 1.2rem;
+}
+
+.pricing h6{
+    margin-left: 1.2rem;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    color: gray;
+    font-weight: 100;  
+}
+
+.pricing button{
+    margin-top: 1rem;
+    background-color: white;
+    border:1px solid blue;
+}
+
+.pricing button a{
+    color: blue;
+    
+}
+
+.active{
+    border-radius: 5px;
+    height:63vh;
+    width: 21rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    margin-top: 3rem;
+    box-shadow: whitesmoke 5px 5px 20px 5px;
+    border-top: 5px solid blue;
+}
+
+.active sub{
+    color: gray;
+}
+
+.active .fa-sharp{
+    font-size: 0.7rem;
+    color: green;
+}
+
+.active h6{
+    margin-left: 1.2rem;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    color: gray;
+    font-weight: 100;
+}
+
+.active button{
+    margin-top: 1rem;
+    background-color: blue;
+}
+
+.active button a{
+    color: white;
+}
+
+/* styling 6th Body section */
+.container-5{
+    background: linear-gradient(rgba(3, 32, 61, 0.514), rgba(3, 32, 61, 0.514)), url(images/testimonials-bg.jpg);
+    height: 60vh;
+
+}
+
+.Testimonial img {
+    border-radius: 20rem;
+    width: 5rem;
+    height: 12vh;
+    border: 3px solid gray;
+    display: flex;
+    margin: 0 auto;
+}
+
+.Testimonial{
+   text-align: center;
+   padding-top: 7rem;
+}
+
+.container-5 h4{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.container-5 h5{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.container-5 cite{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* styling 7th Body section */
+.container-6{
+    height: 50vh;
+}
+
+.container-6  h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 3rem;
+  color: rgb(21, 21, 133); 
+  margin-bottom: 3rem;
+}
+
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+    width: 43rem;
+    height: 5vh;
+    background-color: rgb(243, 243, 243);
+    margin-top: 0.5rem;
+}
+
+.questions h5{
+    width: 100%;
+}
+
+.fa-question{
+    padding-right: 0.2rem;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 1rem;
+    height: 2vh;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    padding-left: 0.1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.dropdown{
+    margin-top: -0.6rem;
+    margin-right: 1rem;
+}
+
+/* styling footer section */
+
+footer{
+    background-color: rgb(6, 6, 43);
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 5rem;
+    margin-top: 4rem;
+}
+
+.footer-1{
+    width: 25rem;
+}
+
+.footer-1 p{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-1 .fa-brands{
+    font-size: 1rem;
+    border: 1px solid rgba(216, 216, 216, 0.63);
+    border-radius: 5rem;
+    margin-top: 1.8rem;
+    width: 2.5rem;
+    height: 6vh;
+    padding-left: 0.7rem;
+    padding-top: 0.6rem;
+    color: white;
+    background-color: rgb(6, 6, 43);
+}
+
+.footer-1 .fa-brands:hover{
+    color: rgb(6, 6, 43);
+    background-color: white;
+}
+
+.footer-2{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer-2 h5{
+    margin-left: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-2 a{
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+}
+
+.footer-3{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.footer-3 h5{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-3 a{
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-4{
+    display: flex;
+    flex-direction: column;
+    width: 11%;
+}
+
+.footer-4 h5{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-4 p{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.footer-4 span{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+
+.footer-end{
+    height: 18vh;
+    background-color: rgb(6, 6, 43);
+}
+
+.footer-end p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 3rem;
+    font-size: 0.8rem;
+}
+
+.icon-Top i{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: blue;
+    border-radius: .8rem;
+    transition: .5s ease;
+    margin-top: 16rem;
+}
+
+.icon-Top:hover{
+    box-shadow: 0 0 10px rgb(106, 145, 204);
+}
+
+.icon-Top a i {
+    font-size: 1rem;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
